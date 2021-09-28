@@ -1,0 +1,47 @@
+:root{
+    --primary-color : #34D399;
+}
+
+body{
+    margin:0px;
+}
+
+p{
+    text-align: center;
+}
+
+.header {
+    text-align: center;
+    background-color: var(--primary-color);
+    margin: 0px;
+    border-radius: 1rem;
+    color: white;
+    padding: 1rem;
+    
+}
+
+#txt-area {
+    resize: none;
+    margin: auto;
+    display: block;
+    padding: 1rem;
+}
+#btn-click {
+    margin: auto;
+    display: block;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    border-radius: 1rem;
+    color: white;
+    font-weight: bold;
+
+}
+#output{
+    border: 1px solid black;
+    width: 30%;
+    margin:auto;
+    padding: 10px;
+    height: 10vh;
+    color: black;
+    
+}
