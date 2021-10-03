@@ -4,18 +4,18 @@ var outputDiv = document.querySelector("#output")
 
 var input_text = document.querySelector("#txt-area")
 
-function clickHandling() {
-    
-    var array = input_text.value.split(" ")
-    var string=""
-    for(var i=0;i<array.length;i++) {
-        string+=(array[i] + " ki ")
-    }
-    
-    outputDiv.innerText = string 
+var url = "https://api.funtranslations.com/translate/klingon.json"
 
 
+function translate(text){
+
+    return url +"?text="+text
 }
 
+function clickHandling(){
+    fetch(translate(input_text.value))
+        .then(respone => respone.json())
+        .then(json => outputDiv.innerText = json.contents.tranlated)
+}
 
 translate_btn.addEventListener("click",clickHandling)
