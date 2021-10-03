@@ -12,10 +12,16 @@ function translate(text){
     return url +"?text="+text
 }
 
+function error(){
+    console.log("Oops somethings is wrong")
+    alert("Something went wrong")
+}
+
 function clickHandling(){
     fetch(translate(input_text.value))
         .then(respone => respone.json())
-        .then(json => outputDiv.innerText = json.contents.tranlated)
+        .then(json => outputDiv.innerText = json.contents.translated)
+        .catch(error)
 }
 
 translate_btn.addEventListener("click",clickHandling)
