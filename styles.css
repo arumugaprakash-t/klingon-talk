@@ -5,6 +5,12 @@
 body{
     margin:0px;
 }
+footer{
+    padding: 2rem;
+    text-align: center;
+    border-radius: 2rem;
+    background-color: var(--primary-color);
+}
 
 p{
     text-align: center;
